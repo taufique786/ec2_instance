@@ -49,7 +49,10 @@ def create_ec2_instance():
 
         # Upload the file
         os.system('/usr/bin/rsync -Pav -e "ssh -i %s -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -q" %s ubuntu@%s:~' %(key_pair, local_path, instance_ip))
-
+        
+        # This can be replaced with line 51 if you would like to transfer and unzip the file at the same time.
+        # os.system('cat %s | ssh -i %s -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q ubuntu@%s "mkdir webapp && cd ~/webapp; tar zxvf -"' %(local_path, key_pair_path, instance_ip))
+        
 # Get arguments from the terminal
 def main():
     parser = argparse.ArgumentParser()
