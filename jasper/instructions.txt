@@ -6,7 +6,8 @@ Installation:
 4) Run bot_id.py to get the BOT_ID
 5) Run export BOT_ID="your-bot-id"
 6) Change aws_access_key_id and aws_secret_access_key in jasper.py
-7) Invite jasper into the channel
+7) Run jasper.py
+8) Invite jasper into the channel
 
 Prerequisites:
 
