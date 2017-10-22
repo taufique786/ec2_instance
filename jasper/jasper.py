@@ -25,8 +25,8 @@ if slack_client.rtm_connect():
                     split("<@%s>" % bot_id)[1]. \
                     strip()
 
-                conn = boto.ec2.connect_to_region("us-west-2", aws_access_key_id='AKIAJCV77UQTK7ZF5TBQ',
-                                                  aws_secret_access_key='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')
+                conn = boto.ec2.connect_to_region("us-west-2", aws_access_key_id=<aws_access_key_id>,
+                                                  aws_secret_access_key=<aws_secret_access_key>)
 
                 # Jasper Help
                 help = 'Try these ' + '\n' + '*create <ami_id> <instance_type> <key_pair> <link>*' + '\n'
